@@ -1,6 +1,9 @@
 import Header from './components/Header'
+import { useRef } from 'react'
 
 const App = () => {
+
+  const lastActiveLink = useRef()
 
   const navItems = [
     {
@@ -32,7 +35,21 @@ const App = () => {
   ];
 
   return (
-    <Header />
+    <nav className="navbar ">
+      {
+        navItems.map({label, link, className, ref}, key => (
+          <a 
+            href={link} 
+            className={className}
+            key={key}
+            ref={ref}
+            onClick={null}
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
   )
 }
 
