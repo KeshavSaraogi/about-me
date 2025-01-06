@@ -4,6 +4,7 @@ import { useRef } from 'react'
 const App = () => {
 
   const lastActiveLink = useRef()
+  const activeBox = useRef()
 
   const navItems = [
     {
@@ -49,6 +50,9 @@ const App = () => {
           </a>
         ))
       }
+      <div className="active-box"
+        ref={activeBox}>
+      </div>
     </nav>
   )
 }
