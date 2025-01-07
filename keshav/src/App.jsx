@@ -1,7 +1,7 @@
 import Header from './components/Navbar'
 import { useRef } from 'react'
 
-const App = () => {
+const App = ({navOpen}) => {
 
   const lastActiveLink = useRef()
   const activeBox = useRef()
@@ -36,7 +36,7 @@ const App = () => {
   ];
 
   return (
-    <nav className="navbar ">
+    <nav className=<{'navbar' + navOpen ? 'active' : ''}>
       {
         navItems.map({label, link, className, ref}, key => (
           <a 
