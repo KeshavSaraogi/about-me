@@ -1,4 +1,4 @@
-import Header from './components/Navbar'
+import Header from './components/Header'
 import { useRef } from 'react'
 
 const App = ({navOpen}) => {
@@ -36,7 +36,7 @@ const App = ({navOpen}) => {
   ];
 
   return (
-    <nav className=<{'navbar' + navOpen ? 'active' : ''}>
+    <nav className={`navbar${navOpen ? ' active' : ''}`}>
       {
         navItems.map({label, link, className, ref}, key => (
           <a 
