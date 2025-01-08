@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import { useRef } from 'react'
 
-const App = ({navOpen}) => {
+const Navbar = ({navOpen}) => {
 
   const lastActiveLink = useRef()
   const activeBox = useRef()
@@ -57,4 +57,4 @@ const App = ({navOpen}) => {
   )
 }
 
-export default App;
+export default Navbar;
