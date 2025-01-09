@@ -1,4 +1,4 @@
-import Header from './components/Header'
+import Header from './Header'
 import { useRef } from 'react'
 
 const Navbar = ({navOpen}) => {
@@ -35,26 +35,25 @@ const Navbar = ({navOpen}) => {
     }
   ];
 
-  return (
-    <nav className={`navbar${navOpen ? ' active' : ''}`}>
-      {
-        navItems.map({label, link, className, ref}, key => (
-          <a 
-            href={link} 
-            className={className}
-            key={key}
-            ref={ref}
-            onClick={null}
-          >
-            {label}
-          </a>
-        ))
-      }
-      <div className="active-box"
-        ref={activeBox}>
-      </div>
-    </nav>
-  )
+  return
+  //   <nav className={`navbar${navOpen ? ' active' : ''}`}>
+  //     {
+  //       navItems.map({label, link, className, ref}, key => (
+  //         <a 
+  //           href={link} 
+  //           className={className}
+  //           key={key}
+  //           ref={ref}
+  //           onClick={null}
+  //         >
+  //           {label}
+  //         </a>
+  //       ))
+  //     }
+  //     <div className="active-box"
+  //       ref={activeBox}>
+  //     </div>
+  //   </nav>
 }
 
 export default Navbar;

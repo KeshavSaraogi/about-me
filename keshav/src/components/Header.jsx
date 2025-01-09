@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 
-const Header = ({ navOpen }) => {
+const Header = () => {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
@@ -24,13 +24,13 @@ const Header = ({ navOpen }) => {
             <div className='relative md:justify-self-center'>
                 <button 
                     className='menu-btn md:hidden' 
-                    onClick={null}>
+                    onClick={() => setNavOpen((prev) => !prev)}>
                     <span className='material-symbols-rounded'>
                         menu
                     </span>
                 </button>
 
-                NavBar
+                <Navbar />
             </div>
             <a href="#contact" className='btn btn-secondary max-md:hidden md:justify-self-end'>
                 Contact Me
